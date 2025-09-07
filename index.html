@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ICT4D Principles on Water</title>
+  <style>
+    /* Water background */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(#00bfff, #1e90ff);
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
+    }
+
+    /* Water animation */
+    .water {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2), transparent 70%);
+      animation: wave 10s infinite linear;
+      z-index: 0;
+    }
+
+    @keyframes wave {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Floating table container */
+    .table-container {
+      position: relative;
+      z-index: 1;
+      margin: 50px auto;
+      width: 90%;
+      max-width: 1200px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      position: relative;
+    }
+
+    th {
+      background-color: #003366;
+      color: #fff;
+    }
+
+    td:nth-child(2) {
+      background-color: #ffe135; /* Banana yellow */
+      font-weight: bold;
+    }
+
+    td:nth-child(3) {
+      background-color: #ff4500; /* Fire color */
+      color: #fff;
+    }
+
+    td:nth-child(4), td:nth-child(5) {
+      background-color: #1e90ff; /* Blue */
+      color: #fff;
+    }
+
+    tr:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(255,255,255,0.6);
+    }
+
+    tr:hover td {
+      background-color: #222 !important;
+      color: #fff !important;
+    }
+
+    td::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: transparent;
+      box-shadow: 0 0 0 0 rgba(255,255,255,0);
+      transition: box-shadow 0.3s ease;
+    }
+
+    tr:hover td::before {
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="water"></div>
+
+  <div class="table-container">
+    <h1>🌊 ICT4D Ethical Principles Floating on Water</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Principle</th>
+          <th>Explanation</th>
+          <th>Example 1</th>
+          <th>Example 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1️⃣</td>
+          <td>Equity & Access</td>
+          <td>Ensure fair access to digital tools and services for all.</td>
+          <td>Solar-powered Wi-Fi hubs in remote villages.</td>
+          <td>Free SMS health info in Sesotho for non-smartphone users.</td>
+        </tr>
+        <tr>
+          <td>2️⃣</td>
+          <td>Sustainability</td>
+          <td>Design solutions communities can maintain long-term.</td>
+          <td>Train youth to manage ICT infrastructure.</td>
+          <td>Use open-source software with local adaptability.</td>
+        </tr>
+        <tr>
+          <td>3️⃣</td>
+          <td>Cultural Humility</td>
+          <td>Respect and learn from local traditions and norms.</td>
+          <td>Apps in Sesotho with local symbols.</td>
+          <td>Consult elders before launching farming tools.</td>
+        </tr>
+        <tr>
+          <td>4️⃣</td>
+          <td>Diversity, Inclusion & Inequality</td>
+          <td>Include marginalized groups and reduce digital divides.</td>
+          <td>ICT programs for rural girls with flexible hours.</td>
+          <td>Disability-friendly features like voice prompts.</td>
+        </tr>
+        <tr>
+          <td>5️⃣</td>
+          <td>Collaborative Critical Thinking & Inquiry</td>
+          <td>Co-create solutions through dialogue and reflection.</td>
+          <td>Community workshops to design tech together.</td>
+          <td>Students use ICT for local storytelling projects.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
